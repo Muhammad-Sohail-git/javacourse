@@ -3,16 +3,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        Employee employee = new Employee("Sohail", "28/08/1996", "12/12/2060", "12/12/2012");
+        Employee employee = new Employee("Sohail", "1996-08-23", "2996-08-23", "1996-08-23", "Khan");
         System.out.println(employee);
         System.out.println("Age= "+ employee.getAge());
         System.out.println("Termination Date= "+ employee.endDate);
+        System.out.println("Is Terminated: "+ employee.isRetired);
+        System.out.println("Pay= "+ employee.collectPay());
 
-        SalariedEmployee employee1 = new SalariedEmployee("Malik", "28/08/1990", "12/12/2013", "12/12/2011", 2000);
+        SalariedEmployee employee1 = new SalariedEmployee("Malik", "1996-08-23", "2996-08-23", "1996-08-23", 2000,"Sohail");
         System.out.println(employee1);
         System.out.println("Age= "+ employee1.getAge());
         System.out.println("Pay= "+ employee1.collectPay());
-        System.out.println("Termination Date= "+ employee1.isRetired);
+        System.out.println("termination date:" + employee1.endDate);
+        System.out.println("Is Terminated: "+ employee1.isRetired);
         System.out.println("Annual Salary= "+ employee1.annualSalary);
         System.out.println("Malik's Pay check= "+ employee1.collectPay());
     }
